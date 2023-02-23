@@ -1,6 +1,6 @@
 Summary:		Flatpak Permissions Management KCM
 Name:		plasma-welcome
-Version:		5.27.0
+Version:		5.27.1
 Release:		1
 License:       GPLv2+
 Group:		Graphical desktop/KDE
