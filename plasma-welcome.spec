@@ -1,4 +1,4 @@
-Summary:		Flatpak Permissions Management KCM
+Summary:		A friendly onboarding wizard for Plasma
 Name:		plasma-welcome
 Version:		5.27.1
 Release:		1
