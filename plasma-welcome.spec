@@ -1,11 +1,11 @@
-Summary:		A friendly onboarding wizard for Plasma
+Summary:	A friendly onboarding wizard for Plasma
 Name:		plasma-welcome
-Version:		5.27.3
-Release:		2
-License:       GPLv2+
+Version:	5.27.4.1
+Release:	1
+License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/plasma-welcome
-Source0:		http://download.kde.org/stable/plasma/%{version}/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/plasma/%(echo %{version}|cut -d. -f1-3)/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KAccounts)
 BuildRequires:	cmake(KUserFeedback)
