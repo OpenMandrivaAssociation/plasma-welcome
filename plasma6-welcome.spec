@@ -14,6 +14,7 @@ Source0:	https://invent.kde.org/plasma/plasma-welcome/-/archive/master/plasma-we
 Source0:	http://download.kde.org/%{stable}/plasma/%{version}/plasma-welcome-%{version}.tar.xz
 %endif
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(KF6NewStuff)
