@@ -33,6 +33,7 @@ BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(KF6Svg)
 BuildRequires:	cmake(KF6JobWidgets)
+BuildRequires:	cmake(KF6KirigamiAddons)
 BuildRequires:	pkgconfig(Qt6QuickControls2)
 
 %description
