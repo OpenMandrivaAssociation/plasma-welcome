@@ -18,6 +18,7 @@ BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(Plasma) >= 5.90.0
+BuildRequires:	cmake(PlasmaQuick)
 BuildRequires:	cmake(KF6NewStuff)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(KF6Notifications)
