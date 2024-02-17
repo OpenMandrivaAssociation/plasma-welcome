@@ -1,15 +1,17 @@
 %define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 ] && echo -n un; echo -n stable)
-#define git 20231130
+%define git 20240217
+%define gitbranch Plasma/6.0
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	A friendly onboarding wizard for Plasma
 Name:		plasma6-welcome
-Version:	5.93.0
+Version:	5.94.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/plasma-welcome
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/plasma/plasma-welcome/-/archive/master/plasma-welcome-master.tar.bz2#/plasma-welcome-%{git}.tar.bz2
+Source0:	https://invent.kde.org/plasma/plasma-welcome/-/archive/%{gitbranch}/plasma-welcome-%{gitbranchd}.tar.bz2#/plasma-welcome-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{version}/plasma-welcome-%{version}.tar.xz
 %endif
@@ -44,7 +46,7 @@ connect to the internet, install apps,
 customize the system, and more!
 
 %prep
-%autosetup -p1 -n plasma-welcome-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n plasma-welcome-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DBUILD_TESTING:BOOL=OFF \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
