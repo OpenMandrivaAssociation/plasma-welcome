@@ -4,9 +4,9 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	A friendly onboarding wizard for Plasma
-Name:		plasma6-welcome
+Name:		plasma-welcome
 Version:	6.3.4
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/plasma-welcome
@@ -37,6 +37,13 @@ BuildRequires:	cmake(KF6Svg)
 BuildRequires:	cmake(KF6JobWidgets)
 BuildRequires:	cmake(KF6KirigamiAddons)
 BuildRequires:	pkgconfig(Qt6QuickControls2)
+# Renamed after 6.0 2025-05-03
+%rename plasma6-welcome
+
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
+BuildOption:	-DBUILD_TESTING:BOOL=OFF
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 A Friendly onboarding wizard for Plasma.
@@ -45,22 +52,7 @@ to KDE Plasma! It can help you learn how to
 connect to the internet, install apps,
 customize the system, and more!
 
-%prep
-%autosetup -p1 -n plasma-welcome-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_TESTING:BOOL=OFF \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang plasma-welcome
-
-%files -f plasma-welcome.lang
+%files -f %{name}.lang
 %{_bindir}/plasma-welcome
 %{_qtdir}/plugins/kf6/kded/kded_plasma-welcome.so
 %{_datadir}/applications/org.kde.plasma-welcome.desktop
