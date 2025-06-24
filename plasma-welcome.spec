@@ -5,7 +5,7 @@
 
 Summary:	A friendly onboarding wizard for Plasma
 Name:		plasma-welcome
-Version:	6.4.0
+Version:	6.4.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
