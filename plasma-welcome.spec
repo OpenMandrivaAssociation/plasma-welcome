@@ -5,7 +5,7 @@
 
 Summary:	A friendly onboarding wizard for Plasma
 Name:		plasma-welcome
-Version:	6.5.5
+Version:	6.6.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -54,9 +54,9 @@ customize the system, and more!
 
 %files -f %{name}.lang
 %{_bindir}/plasma-welcome
-%{_qtdir}/plugins/kf6/kded/kded_plasma-welcome.so
 %{_datadir}/applications/org.kde.plasma-welcome.desktop
 %{_datadir}/metainfo/org.kde.plasma-welcome.appdata.xml
 %{_libdir}/libplasma-welcome-publicplugin.a
 %{_qtdir}/qml/org/kde/plasma/welcome
 %{_datadir}/qlogging-categories6/welcome.categories
+%{_qtdir}/plugins/kf6/kded/kded_plasma_welcome.so
