@@ -59,4 +59,5 @@ customize the system, and more!
 %{_libdir}/libplasma-welcome-publicplugin.a
 %{_qtdir}/qml/org/kde/plasma/welcome
 %{_datadir}/qlogging-categories6/welcome.categories
+%{_datadir}/config.kcfg/plasma-welcome.kcfg
 %{_qtdir}/plugins/kf6/kded/kded_plasma_welcome.so
